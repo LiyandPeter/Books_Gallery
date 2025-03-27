@@ -1,0 +1,66 @@
+.book-detail-container {
+    padding: 40px 20px;
+    background-color: #ffff91;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* 詳細卡片容器 */
+  .book-detail-card {
+    background-color: #eed951;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* 書籍封面圖片 */
+  .book-detail-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  /* 書籍信息區域 */
+  .book-info {
+    padding: 20px;
+  }
+  
+  /* 書名樣式 */
+  .book-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* 作者名稱樣式 */
+  .book-author {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  /* 其他詳細資料 */
+  .book-details {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* 返回畫廊的按鈕 */
+  .return-btn {
+    background-color: #beac08;
+    color: #fffc60;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* 返回按鈕懸停效果 */
+  .return-btn:hover {
+    background-color: #ffff00;
+  }
