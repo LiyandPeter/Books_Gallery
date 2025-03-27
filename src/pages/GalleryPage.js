@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import booksData from '../books.json';
+import booksData from './books.json';
 
 const GalleryPage = () => {
   const [books, setBooks] = useState([]);
