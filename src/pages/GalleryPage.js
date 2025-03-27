@@ -12,15 +12,15 @@ const GalleryPage = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="gallery-container">
       {books.map(book => (
-        <div key={book.id} className="card w-full max-w-sm bg-base-100 shadow-xl">
+        <div key={book.id} className="book-card">
           <figure><img src={book.cover} alt={book.title} /></figure>
           <div className="card-body">
             <h2 className="card-title">{book.title}</h2>
             <p>{book.author}</p>
             <div className="card-actions justify-end">
-              <Link to={`/book/${book.id}`} className="btn btn-primary">View Details</Link>
+              <Link to={`/book/${book.id}`} className="view-details-btn">View Details</Link>
             </div>
           </div>
         </div>

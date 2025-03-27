@@ -16,17 +16,18 @@ const BookDetailPage = () => {
   if (!book) return <div>Loading...</div>;
 
   return (
-    <div className="p-8">
-      <div className="card w-full max-w-lg bg-base-100 shadow-xl">
-        <figure><img src={book.cover} alt={book.title} /></figure>
-        <div className="card-body">
-          <h2 className="card-title">{book.title}</h2>
-          <p>{book.author}</p>
-          <p>Price: ${book.price}</p>
-          <p>Stock: {book.stock} available</p>
-          <p>{book.summary}</p>
+    <div className="book-detail-container">
+      <div className="book-detail-card">
+        <figure><img src={book.cover} alt={book.title} className="book-detail-img" /></figure>
+        <div className="book-info">
+          <h2 className="book-title">{book.title}</h2>
+          <p className="book-author">{book.author}</p>
+          <p className="book-details">Price: ${book.price}</p>
+          <p className="book-details">Stock: {book.stock} available</p>
+          <p className="book-details">{book.summary}</p>
         </div>
       </div>
+      <Link to="/" className="return-btn">Back to Gallery</Link>
     </div>
   );
 };
