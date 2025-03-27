@@ -5,6 +5,7 @@ import GalleryPage from './pages/GalleryPage';
 import BookDetailPage from './pages/BookDetailPage';
 import './pages/GalleryPage.css';
 import './pages/BookDetailPage.css';
+import booksData from './components/books.json';
 
 function App() {
   return (
