@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import booksData from './books.json';
+import './BookDetailPage.css';
 
 const BookDetailPage = () => {
   const { id } = useParams();
