@@ -64,3 +64,44 @@
   .return-btn:hover {
     background-color: #ffff00;
   }
+  .book-detail-container {
+  padding: 40px 20px;
+  background-color: #ffff91;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 響應式 - 當螢幕寬度小於 768px 時 */
+@media (max-width: 768px) {
+  .book-detail-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .book-detail-img {
+    height: 250px; /* 縮小圖片的高度 */
+  }
+
+  .book-info {
+    padding: 10px;
+  }
+
+  .book-title {
+    font-size: 1.5rem; /* 書名字體縮小 */
+  }
+}
+
+/* 響應式 - 當螢幕寬度小於 480px 時 */
+@media (max-width: 480px) {
+  .book-detail-container {
+    padding: 10px;
+  }
+
+  .book-detail-img {
+    height: 200px;
+  }
+
+  .book-title {
+    font-size: 1.2rem;
+  }
+}
