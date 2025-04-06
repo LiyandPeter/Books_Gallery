@@ -1,10 +1,10 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import GalleryPage from './pages/GalleryPage';
-import BookDetailPage from './pages/BookDetailPage';
-import './pages/GalleryPage.css';
-import './pages/BookDetailPage.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import GalleryPage from './pages/GalleryPage';  // 引入 GalleryPage
+import BookDetailPage from './pages/BookDetailPage';  // 引入 BookDetailPage
+import './pages/GalleryPage.css';  // GalleryPage 樣式
+import './pages/BookDetailPage.css';  // BookDetailPage 樣式
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         </Routes>
       </div>
     </Router>
-    
+
   );
 }
 

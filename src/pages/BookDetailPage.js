@@ -1,33 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import booksData from './books.json';
+import booksData from '../books.json';
 import './BookDetailPage.css';
 
 const BookDetailPage = () => {
-  const { id } = useParams();
+  const { id } = useParams(); // 取得 URL 中的書籍ID
   const [book, setBook] = useState(null);
 
   useEffect(() => {
-    // books.json 檔案
-    const selectedBook = booksData.find(book => book.id === id);
-    setBook(selectedBook);
+    // 根據ID查找對應的書籍
+    const foundBook = booksData.find((b) => b.ID === parseInt(id));
+    setBook(foundBook);
   }, [id]);
 
-  if (!book) return <div>Loading...</div>;
+  if (!book) {
+    return <div>Loading...</div>;
+  }
 
   return (
-    <div className="book-detail-container">
-      <div className="book-detail-card">
-        <figure><img src={book.cover} alt={book.title} className="book-detail-img" /></figure>
-        <div className="book-info">
-          <h2 className="book-title">{book.title}</h2>
-          <p className="book-author">{book.author}</p>
-          <p className="book-details">Price: ${book.price}</p>
-          <p className="book-details">Stock: {book.stock} available</p>
-          <p className="book-details">{book.summary}</p>
-        </div>
+    <div className="book-detail-container p-8">
+      <div className="book-detail-content max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <img src={book.cover} alt={book.title} className="w-full h-96 object-cover rounded-lg mb-8" />
+        <h2 className="text-3xl font-bold mb-4">{book.title}</h2>
+        <p className="text-xl text-gray-700 mb-2">by {book.author}</p>
+        <p className="text-lg text-gray-800 mb-4">{book.summary}</p>
+        <p className="text-lg text-gray-600">Price: ${book.price}</p>
+        <p className="text-lg text-gray-600">In Stock: {book.stock}</p>
       </div>
-      <Link to="/" className="return-btn">Back to Gallery</Link>
     </div>
   );
 };
